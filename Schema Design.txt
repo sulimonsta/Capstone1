@@ -1,0 +1,25 @@
+Different Tables:
+
+1. Teams 
+2. Players 
+3.Games 
+4. PlayerStats 
+5. TeamStats Users (Optional) 
+6. Favorites (Optional) 
+7. Schema Design: 
+
+
+Description of Relationships: 
+
+Each team in the Teams table has a unique team_id (Primary Key). 
+
+Each player in the Players table has a unique player_id (Primary Key), and each player belongs to a team, referenced by team_id (Foreign Key). 
+
+Each game in the Games table has a unique game_id (Primary Key), and each game involves a home team and an away team, both referenced by team_id (Foreign Key).
+ 
+Player statistics are stored in the PlayerStats table, with each entry having a unique player_stat_id (Primary Key) and referencing the player and game by player_id and game_id (Foreign Keys) respectively. 
+
+Team statistics are stored in the TeamStats table, with each entry having a unique team_stat_id (Primary Key) and referencing the team and game by team_id and game_id (Foreign Keys) respectively. 
+
+If user accounts are implemented, user details are stored in the Users table, with each user having a unique user_id (Primary Key). 
+User favorites, such as favorite teams or players, are stored in the Favorites table, with each entry having a unique favorite_id (Primary Key) and referencing the user, team, and player by user_id, team_id, and player_id (Foreign Keys) respectively.
