@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Live Scores & Player Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NBA Scores & Player Information</h1>
+        <form id="searchForm">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for teams or players...">
+                <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <main>
+        <section id="Scores">
+            <h2>Scores</h2>
+            <!--  scores will be dynamically updated here -->
+            <div id="scoresContainer">
+                <!-- Example: -->
+                <!-- <div class="scoreCard">Team A vs Team B: 102 - 98</div> -->
+            </div>
+        </section>
+
+        <section id="playerInfo">
+            <h2>Player Information</h2>
+            <!-- Player information will be dynamically updated here -->
+            <div id="playerInfoContainer">
+                <!-- Example: -->
+                <!-- <div class="playerCard">Player Name - Team: Position</div> -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

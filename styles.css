@@ -1,0 +1,120 @@
+:root {
+    --dark-blue: #003366; /* Dark Blue */
+    --sunset-orange: #E24000; /* Sunset Orange */
+    --light-gray: #f0f2f5; /* Light background */
+    --text-color: #ffffff; /* White text for contrast */
+}
+
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark-blue);
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: var(--dark-blue);
+    color: var(--text-color);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin: 0 0 20px 0;
+    font-weight: 300;
+}
+
+/* Search form styles */
+#searchForm {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#searchInput, #searchForm button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+#searchInput {
+    display: block;
+}
+
+#searchForm button {
+    background-color: var(--sunset-orange);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchForm button:hover {
+    background-color: darken(var(--sunset-orange), 1%); /* Slightly darken on hover */
+}
+
+/* Main section styles */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Section title styles */
+h2 {
+    margin: 40px 0 20px;
+    font-weight: 300;
+    color: var(--dark-blue);
+}
+
+/* Cards container styles */
+#scoresContainer, #playerInfoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.scoreCard, .playerCard {
+    background-color: var(--text-color);
+    color: var(--dark-blue); /* Ensure text is readable against the light background */
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(50% - 40px);
+    transition: transform 0.3s;
+}
+
+.scoreCard:hover, .playerCard:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .scoreCard, .playerCard {
+        width: calc(100% - 20px);
+    }
+
+    #searchInput, #searchForm button {
+        padding: 15px;
+    }
+}
