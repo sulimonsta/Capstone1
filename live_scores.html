@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live NBA Scores</title>
+</head>
+<body>
+    <h1>Live NBA Scores</h1>
+    <table border="1">
+        <tr>
+            <th>Game</th>
+            <th>Status</th>
+            <th>Home Team</th>
+            <th>Away Team</th>
+            <th>Home Score</th>
+            <th>Away Score</th>
+        </tr>
+        {% for game in live_scores %}
+        <tr>
+            <td>{{ game['GAMECODE'] }}</td>
+            <td>{{ game['GAME_STATUS_TEXT'] }}</td>
+            <td>{{ game['HOME_TEAM_ID'] }}</td>
+            <td>{{ game['VISITOR_TEAM_ID'] }}</td>
+            <td>{{ game['HOME_TEAM_SCORE'] }}</td>
+            <td>{{ game['VISITOR_TEAM_SCORE'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+</html>
