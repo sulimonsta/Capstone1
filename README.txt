@@ -25,7 +25,7 @@ This website allows users to search for NBA players to view their career statist
 
 ### API Notes
 
-This website utilizes the `nba_api`, an unofficial NBA API for accessing player, team, and game data. The API's extensive documentation and community support have made it a reliable source for real-time and historical NBA data.
+This website utilizes the `nba_api`, an unofficial NBA API for accessing player, team, and game data. 
 
 ### Technology Stack
 
